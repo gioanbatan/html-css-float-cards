@@ -22,12 +22,16 @@ main {
 
 h1 {
     text-align: center;
+    margin: 1em 0 1.5em;
+
     /* DEBUG */
     background-color: blue;
 }
 
 p {
     text-align: center;
+    margin-bottom: 1em;
+
     /* DEBUG */
     background-color: aquamarine;
 }
@@ -42,27 +46,34 @@ p {
 }
 
 .card {
-    width: calc(100% / 3 - 1em);
+    width: calc(100% / 3 - ((1em / 3) * 2));
     float: left;
 
     margin-right: 1em;
+    margin-bottom: 1em;
 
     /* DEBUG */
     background-color: cornflowerblue;
     border: 1px solid black;
 }
 
+.card:nth-of-type(3n) {
+    margin-right: 0;
+}
+
 .card-image {
     float: left;
     
     /* DEBUG */
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     background-color: azure;
 }
 
 .card-data {
     float: left;
+    height: 100px;
+    padding: 0.5em;
 
     /* DEBUG */
     background-color: black;
